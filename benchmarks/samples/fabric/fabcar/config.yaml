@@ -4,23 +4,21 @@ test:
     number: 5
   rounds:
     - label: Change car owner.
-      txDuration:
-        - 30
+      txDuration: 30
       rateControl:
-        - type: fixed-load
-          opts:
-            transactionLoad: 5
+        type: fixed-load
+        opts:
+          transactionLoad: 5
       workload:
         module: benchmarks/samples/fabric/fabcar/changeCarOwner.js
         arguments:
           assets: 1000
     - label: Query all cars.
-      txDuration:
-        - 30
+      txDuration: 30
       rateControl:
-        - type: fixed-load
-          opts:
-            transactionLoad: 5
+        type: fixed-load
+        opts:
+          transactionLoad: 5
       workload:
         module: benchmarks/samples/fabric/fabcar/queryAllCars.js
         arguments:
@@ -28,22 +26,20 @@ test:
           startKey: '1'
           endKey: '50'
     - label: Query a car.
-      txDuration:
-        - 30
+      txDuration: 30
       rateControl:
-        - type: fixed-load
-          opts:
-            transactionLoad: 5
+        type: fixed-load
+        opts:
+          transactionLoad: 5
       workload:
         module: benchmarks/samples/fabric/fabcar/queryCar.js
         arguments:
           assets: 1000
     - label: Create a car.
-      txDuration:
-        - 30
+      txDuration: 30
       rateControl:
-        - type: fixed-load
-          opts:
-            transactionLoad: 5
+        type: fixed-load
+        opts:
+          transactionLoad: 5
       workload:
         module: benchmarks/samples/fabric/fabcar/createCar.js
